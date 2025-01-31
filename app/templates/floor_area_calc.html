@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Расчет площади пола</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Рассчитать</button>
+    </form>
+    {% if result %}
+        <h3 class="mt-4">Площадь пола: {{ result }} кв. м</h3>
+    {% endif %}
+{% endblock %}
