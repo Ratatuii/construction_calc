@@ -41,3 +41,47 @@ python3 --version
 
 Если Python не установлен, скачайте его с python.org или установите через менеджер пакетов (например, Homebrew для macOS или apt для Ubuntu).
 
+## 2. Создание виртуального окружения
+
+Перед установкой зависимостей рекомендуется создать виртуальное окружение:
+
+```bash
+python3 -m venv venv
+```
+Активация виртуального окружения:
+
+Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+macOS/Linux:
+
+```bash
+source venv/bin/activate
+```
+
+## 3. Установка зависимостей
+Установите зависимости, указанные в файле requirements.txt:
+
+```bash
+pip install -r requirements.txt
+```
+
+## 4. Настройка проекта Django
+Выполните миграции:
+
+```bash
+python3 manage.py migrate
+```
+## 5. Запуск сервера разработки
+
+Запустите сервер:
+
+```bash
+python3 manage.py runserver
+```
+
+Приложение будет доступно по адресу: http://127.0.0.1:8000/
+
